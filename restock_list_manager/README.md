@@ -15,9 +15,16 @@ One day, I will make this tool more user-friendly. :shipit:
    21/12/2023	Hot Dog and Beans Pie	zirma	1,200 NP
    ```
 
-3. This tool assumes that a "logical table of data" is able to be found within the sheet. If this is not the case—for example, if you have multiple tables in a single sheet—then you may specify a table range within the sheet.append_row() function in Lines 84-85. Specifically, the parameter is `table_range='x'`, where x is whatever the range is in A1 notation. However, I wouldn't recommend having multiple tables in a single sheet anyways, since Google Sheet's filters can't really be applied to all of them.
+2. This tool assumes that a "logical table of data" is able to be found within the sheet. If this is not the case—for example, if you have multiple tables in a single sheet—then you may specify a table range within the sheet.append_row() function in Lines 84-85. Assuming *x* is the range in A1 notation:
+   
+   ```python
+   sheet.append_row([new_item[1], new_item[3], restock_price, '=B:B-C:C', new_item[0]],
+      value_input_option='USER_ENTERED', insert_data_option='INSERT_ROWS', table_range='x')
+   ```
 
-5. This tool formats the spreadsheet in a specific way. The order in which it outputs data, from first to last, is: item name, selling price, restock price, profit, and date.
+   However, I wouldn't recommend having multiple tables in a single sheet anyways, since Google Sheet's filters can't really be applied to all of them.
+
+3. This tool formats the spreadsheet in a specific way. The order in which it outputs data, from first to last, is: item name, selling price, restock price, profit, and date.
 
 ## How to Run the Program
 On top of the program itself, you will also need two additional files in the same directory:
@@ -40,4 +47,4 @@ Since this involves web scraping (an automated process), it may or may not be ag
 
 However, it should be noted that the intentions of this tool is **not** to cheat or give users an unfair advantage. It does not modify the website in any way, nor is it trying to farm for random events, Magma Pool times, etc. It just exports data to a Google spreadsheet. Additionally, I added a 5-second delay between each HTTP request as to not overload the server.
 
-If, in the future, TNT is more clear about what forms of automation are allowed, I will adjust this tool accordingly.
+If, in the future, TNT is more clear about what forms of automation are allowed, I will adjust this tool accordingly. In other words... please don't freeze my acccount TNT :-(
