@@ -81,7 +81,7 @@ def update_or_add_to_sheet(sheet_name, items):
                 print(f'Failed to retrieve {new_item[1]}')
 
             # Add the new item if it doesn't exist in the sheet
-            sheet.append_row([new_item[1], new_item[3], restock_price, '=D:D-E:E', new_item[0]], 
+            sheet.append_row([new_item[1], new_item[3], restock_price, '=B:B-C:C', new_item[0]], 
                 value_input_option='USER_ENTERED', insert_data_option='INSERT_ROWS')
             
             print('Added: ' + new_item[1])
