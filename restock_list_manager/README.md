@@ -7,15 +7,18 @@ One day, I will make this tool more user-friendly. :shipit:
 ## Versions
 1. `add_to_list.py` - includes web scraping; outputs item name, selling price, retail price, profit, & date
    
-   ![image](https://github.com/astrobuns/neotools/assets/38766204/024023ee-a56f-4118-9c6a-e14fae62dd63)
+   <img src="https://github.com/astrobuns/neotools/assets/38766204/92958a26-c349-4969-9073-848d6c5de814" width="600">
+
+
    
 2. `add_to_list2.py` - no web scraping; outputs item name, selling price, profit, & date
    
-   ![image](https://github.com/astrobuns/neotools/assets/38766204/af279f26-77cc-4100-bc20-09c20f7aafaa)
+   <img src="https://github.com/astrobuns/neotools/assets/38766204/fcdb7b66-375b-4689-9942-8040c09aa3ed" width="600">
+
 
 3. `add_to_list3.py` - no web scraping; outputs item name, selling price, & date
    
-   ![image](https://github.com/astrobuns/neotools/assets/38766204/ce426dbf-b95c-45dc-98c8-05e1a1784af7)
+   <img src="https://github.com/astrobuns/neotools/assets/38766204/ab2699c4-99d0-4cf6-af0b-6be6af5bd914" width="370">
 
 
 ## Assumptions Before Starting
