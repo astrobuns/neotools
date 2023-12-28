@@ -22,7 +22,8 @@ def read_text_file(file_path):
             price = ''.join(filter(str.isdigit, item_data[3])) # Extracts number from price
             item_data[3] = int(price) # string -> int
 
-            items.append(item_data)
+            if item_data not in items:
+                items.append(item_data)
     return items
 
 # Function to update or add items to the Google Sheet
@@ -58,7 +59,6 @@ def update_or_add_to_sheet(sheet_name, items):
 
             response = requests.get(url)
 
-            est_value = 0
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
                 strong_values = soup.find_all('strong')
@@ -86,7 +86,9 @@ def update_or_add_to_sheet(sheet_name, items):
             
             print('Added: ' + new_item[1])
 
-            time.sleep(5) # adding some delay for... safety
+        current_values = sheet.get_values()
+
+        time.sleep(5) # adding some delay for... safety
 
 # Specify spreadsheet & file
 file_path = 'items.txt'  # Replace with your file path
