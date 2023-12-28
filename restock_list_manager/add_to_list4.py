@@ -152,7 +152,13 @@ def update_or_add_to_sheet(sheet_name, items):
 
         # scrape for shop & open corresponding sheet
         shop = soup.find('input', {'name' :'obj_type'}).get('value')
-        sheet = client.open(sheet_name).worksheet(shop_dict[shop])
+        sheet = None
+        try:
+            sheet = client.open(sheet_name).worksheet(shop_dict[shop])
+        except: # WorksheetNotFound
+            spreadsheet = client.open(sheet_name)
+            spreadsheet.add_worksheet(shop_dict[shop], 1000, 26) # add sheet with that shop name, default number of rows & columns
+            sheet = client.open(sheet_name).worksheet(shop_dict[shop])
         current_values = sheet.get_values()
         
         item_found = False
