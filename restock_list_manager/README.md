@@ -17,7 +17,7 @@ One day, I will make this tool more user-friendly. :shipit:
    
    <img src="https://github.com/astrobuns/neotools/assets/38766204/ab2699c4-99d0-4cf6-af0b-6be6af5bd914" width="370">
 
-4. `add_to_list4.py` - #1 but with added support for adding items from different shops to different sheets within the spreadsheet, assuming that the sheet name is the shop's name **as it appears on Neopets** (except for "Refreshments" and "Ugga Shinies", since they're both labeled "Shops" in-game for some reason)
+4. `add_to_list4.py` - includes web scraping; adds items from different shops to different sheets within the spreadsheet, assuming that the sheet name is the shop's name **as it appears on Neopets** (except for "Refreshments" and "Ugga Shinies", since they're both labeled "Shops" in-game); if the sheet does not exist, one will be created
 
 Note: Tools without web scraping will run faster mostly because they do not have an added delay.
 
