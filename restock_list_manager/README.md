@@ -8,17 +8,18 @@ One day, I will make this tool more user-friendly. :shipit:
 1. `add_to_list.py` - includes web scraping; outputs item name, selling price, retail price, profit, & date
    
    <img src="https://github.com/astrobuns/neotools/assets/38766204/92958a26-c349-4969-9073-848d6c5de814" width="600">
-
-
    
 2. `add_to_list2.py` - no web scraping; outputs item name, selling price, profit, & date
    
    <img src="https://github.com/astrobuns/neotools/assets/38766204/fcdb7b66-375b-4689-9942-8040c09aa3ed" width="600">
 
-
 3. `add_to_list3.py` - no web scraping; outputs item name, selling price, & date
    
    <img src="https://github.com/astrobuns/neotools/assets/38766204/ab2699c4-99d0-4cf6-af0b-6be6af5bd914" width="370">
+
+4. `add_to_list4.py` - #1 but with added support for adding items from different shops to different sheets within the spreadsheet, assuming that the sheet name is the shop's name **as it appears on Neopets** (except for "Refreshments" and "Ugga Shinies", since they're both labeled "Shops" in-game for some reason)
+
+Note: Tools without web scraping will run faster mostly because they do not have an added delay.
 
 
 ## Assumptions Before Starting
@@ -55,13 +56,9 @@ On top of the program itself, you will also need two additional files in the sam
 To run the program, run `python [insert file name here].py` in the directory where all three of these files are located.
 
 
-## Limitations
-This tool always adds to the first sheet within a spreadsheet (as indicated by "sheet1" in Line 36). I like to separate items based on the Neopian shop they stock in (each with their own sheet), so I unfortunately have to manually sort items before pasting them into "items.txt." If I can figure out how to link items to their corresponding shops, I will release another version that dynamically adds to sheets.
-
-
 ## Lastly...
-Since the original tool involves web scraping (an automated process), it may or may not be against Neopet's Terms of Service.
+Tools that involve web scraping (an automated process) may or may not be against Neopet's Terms of Service.
 
 However, it should be noted that the intentions of this tool is **not** to cheat or give users an unfair advantage. It does not modify the website in any way, nor is it trying to farm for random events, Magma Pool times, etc. It just exports data to a Google spreadsheet. Additionally, I added a 5-second delay between each HTTP request as to not overload the server. (Without the delay, you will run into a connection error about 30 items in.)
 
-Happy restocking!
+If in the future, TNT states outright that any form of automation is not allowed, I will be getting rid of the tools with web scraping.
