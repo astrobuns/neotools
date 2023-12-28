@@ -3,6 +3,21 @@ This tool is intended to automate the process of extracting data from a user's S
 
 One day, I will make this tool more user-friendly. :shipit:
 
+
+## Versions
+1. `add_to_list.py` - includes web scraping; outputs item name, selling price, retail price, profit, & date
+   
+   ![image](https://github.com/astrobuns/neotools/assets/38766204/024023ee-a56f-4118-9c6a-e14fae62dd63)
+   
+2. `add_to_list2.py` - no web scraping; outputs item name, selling price, profit, & date
+   
+   ![image](https://github.com/astrobuns/neotools/assets/38766204/af279f26-77cc-4100-bc20-09c20f7aafaa)
+
+3. `add_to_list3.py` - no web scraping; outputs item name, selling price, & date
+   
+   ![image](https://github.com/astrobuns/neotools/assets/38766204/ce426dbf-b95c-45dc-98c8-05e1a1784af7)
+
+
 ## Assumptions Before Starting
 1. The first part of this tool will extract data from a text file containing the user's Sale History. By default, directly copying and pasting your Sale History **(not including the headers)** into a text file will result in:
 
@@ -24,6 +39,7 @@ One day, I will make this tool more user-friendly. :shipit:
 
    However, I wouldn't recommend having multiple tables in a single sheet anyways, since Google Sheet's filters can't really be applied to all of them.
 
+
 ## How to Run the Program
 On top of the program itself, you will also need two additional files in the same directory:
 
@@ -35,10 +51,14 @@ On top of the program itself, you will also need two additional files in the sam
 
 To run the program, run `python [insert file name here].py` in the directory where all three of these files are located.
 
+
 ## Limitations
 This tool always adds to the first sheet within a spreadsheet (as indicated by "sheet1" in Line 36). I like to separate items based on the Neopian shop they stock in (each with their own sheet), so I unfortunately have to manually sort items before pasting them into "items.txt." If I can figure out how to link items to their corresponding shops, I will release another version that dynamically adds to sheets.
 
-## Lastly...
-Since this involves web scraping (an automated process), it may or may not be against Neopet's Terms of Service.
 
-However, it should be noted that the intentions of this tool is **not** to cheat or give users an unfair advantage. It does not modify the website in any way, nor is it trying to farm for random events, Magma Pool times, etc. It just exports data to a Google spreadsheet. Additionally, I added a 5-second delay between each HTTP request as to not overload the server.
+## Lastly...
+Since the original tool involves web scraping (an automated process), it may or may not be against Neopet's Terms of Service.
+
+However, it should be noted that the intentions of this tool is **not** to cheat or give users an unfair advantage. It does not modify the website in any way, nor is it trying to farm for random events, Magma Pool times, etc. It just exports data to a Google spreadsheet. Additionally, I added a 5-second delay between each HTTP request as to not overload the server. (Without the delay, you will run into a connection error about 30 items in.)
+
+Happy restocking!
